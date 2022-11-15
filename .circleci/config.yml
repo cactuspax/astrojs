@@ -27,7 +27,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - deps-v1--{{ checksum "astrowind/package-lock.json" }}
+            - deps-v1--{{ checksum "/home/paxton/astrojs/astrowind/package-lock.json" }}
             - deps-v1--
 
       - run:
@@ -38,7 +38,7 @@ jobs:
       - save_cache:
           paths:
             - astrowind/node_modules
-          key: deps-v1--{{ checksum "astrowind/package-lock.json" }}
+          key: deps-v1--{{ checksum "/home/paxton/astrojs/astrowind/package-lock.json" }}
 
 workflows:
   build:
