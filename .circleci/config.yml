@@ -35,10 +35,21 @@ jobs:
           command:
             cd astrowind &&
             npm i
+            
       - save_cache:
           paths:
             - astrowind/node_modules
           key: deps-v1--{{ checksum "astrowind/package-lock.json" }}
+
+      - run:
+          name: "Run scp to ec2"
+          command: |
+                  "ssh -i -r $PEM /home/paxton/astrojs/ ec2-user@54.227.27.226:/astrojs"
+
+      - run:
+          name: "ssh command"
+          command: |
+            "ssh -i $PEM 'NPM i && npm run start'"
 
 workflows:
   build:
