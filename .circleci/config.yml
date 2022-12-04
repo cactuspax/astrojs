@@ -43,7 +43,7 @@ jobs:
       - run:
           name: "Run scp to ec2"
           command: |
-                  "scp -i $PEM -r astrojs/ ec2-user@54.204.115.33:/"
+                  "scp -i $PEM -r /home/paxton/astrojs/ ec2-user@54.204.115.33:/home/ec2-user/"
 
       - run:
           name: "ssh command"
