@@ -43,7 +43,10 @@ jobs:
       - run:
           name: "ssh command"
           command: |
-            ssh -i $PEM $USER@$IP && cd astrojs && NPM i && npm run start
+            ssh -i $PEM $USER@$IP
+            cd astrojs/astrowind
+            NPM i
+            npm run start
 
 workflows:
   build:
