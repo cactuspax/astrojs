@@ -43,7 +43,7 @@ jobs:
       - run:
           name: "ssh command"
           command: |
-            "ssh -i $PEM $USER@$IP" && "NPM i && npm run start"
+            ssh -i $PEM $USER@$IP" && NPM i && npm run start
 
 workflows:
   build:
