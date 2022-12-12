@@ -44,7 +44,7 @@ jobs:
           name: "ssh command"
           command: |
             ssh -i astro.pem ec2-user@54.197.137.169
-            cd astrojs/astrowind
+            cd astrojs/astrowind/
             NPM i
             npm run start
 
