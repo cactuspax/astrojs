@@ -42,7 +42,7 @@ jobs:
 
       - run:
           name: "scp astrojs"
-          command: scp -i /home/paxton/astro.pem . ubuntu@54.87.70.208:~/astrojs
+          command: scp -i astro.pem . ubuntu@54.87.70.208:~/astrojs
       - run:
           name: "ssh command"
           command: |
