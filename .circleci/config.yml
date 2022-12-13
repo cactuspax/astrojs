@@ -40,13 +40,13 @@ jobs:
             - astrowind/node_modules
           key: deps-v1--{{ checksum "astrowind/package-lock.json" }}
 
-      - run:
-          name: "scp astrojs"
-          command: scp -i astro.pem . ubuntu@54.87.70.208:~/astrojs
+          #- run:
+        #  name: "scp astrojs"
+          #    command: scp -i astro.pem  ubuntu@54.87.70.208:~/astrojs
       - run:
           name: "ssh command"
           command: |
-            ssh -i /home/paxton/astro.pem ubuntu@54.87.70.208
+            ssh -i astro.pem ubuntu@54.87.70.208
             cd astrojs/astrowind
             NPM i
             npm run start
