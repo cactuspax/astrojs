@@ -43,7 +43,7 @@ jobs:
       - run:
           name: "ssh command"
           command: |
-            ssh -i /home/paxton/astrojs/astro.pem ec2-user@54.243.25.3
+            ssh -i /home/paxton/astrojs/astro.pem ec2-user@ec2-54-243-25-3.compute-1.amazonaws.com
             cd astrojs/astrowind
             NPM i
             npm run start
